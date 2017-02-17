@@ -10,6 +10,7 @@ const getHeader = require('./headers.js');
 //midleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/',(req, res) => {
+  if(req.url == '/favicon.ico') return;
   res.json(getHeader(req));
 });
 
