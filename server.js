@@ -9,7 +9,7 @@ const getHeader = require('./headers.js');
 
 //midleware
 app.use(bodyParser.urlencoded({ extended: false }));
-app.get('/api/whoami',(req, res) => {
+app.get('/',(req, res) => {
   res.json(getHeader(req));
 });
 
